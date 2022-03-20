@@ -11,7 +11,7 @@ import { InventoryService } from '../services/inventory/inventory.service';
 export class AddInventoryPage implements OnInit {
   inventoryForm: FormGroup;  
   constructor(
-    private invServices: InventoryService, 
+    // private invServices: InventoryService, 
     private router: Router, 
     public fb: FormBuilder
   ) { }
@@ -27,11 +27,11 @@ export class AddInventoryPage implements OnInit {
     if(!this.inventoryForm.valid){ 
       return false;
      } else {
-      this.invServices.createItem(this.inventoryForm.value).then(res => {
-        console.log(res)
-        this.inventoryForm.reset();
-        this.router.navigateByUrl('/home', { replaceUrl: true });
-      }) .catch(error => console.log(error));
+      // this.invServices.createItem(this.inventoryForm.value).then(res => {
+      //   console.log(res)
+      //   this.inventoryForm.reset();
+      //   this.router.navigateByUrl('/home', { replaceUrl: true });
+      // }) .catch(error => console.log(error));
     }
   }
 }
